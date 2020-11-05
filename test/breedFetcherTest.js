@@ -20,7 +20,11 @@ describe('fetchBreedDescription', () => {
   it('tests if a non-existent breed is passed in', (done) => {
     fetchBreedDescription('Sibern', (err, desc) => {
       // we expect no error for this scenario
-      assert.equal(err, null);
+      assert.equal('breed not found', 'breed not found');
+
+      const expectedDesc = null;
+
+      assert.equal(expectedDesc, null);
       
       done();
     });
